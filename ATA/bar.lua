@@ -15,42 +15,40 @@ end
 
 function bar.init(b)
 	b.capLeft = images.new({
+		texture = {path=windower.addon_path..'img/cap_left.png', fit=true},
 		pos = {x=0, y=0},
 		visible = true,
-		color = {alpha=b.color.alpha, red=b.color.red, green=b.color.green, blue=b.color.blue},
-		size = {width=1, height=12},
-		texture = {path=windower.addon_path..'img/cap.png', fit=true},
+		size = {width=6, height=12},
 		draggable = false })
 	b.bg = images.new({
+		texture = {path=windower.addon_path..'img/bg.png', fit=true},
 		pos = {x=0, y=0},
 		visible = true,
 		color = {alpha=b.color.alpha, red=b.color.red, green=b.color.green, blue=b.color.blue},
 		size = {width=b.width, height=12},
-		texture = {path=windower.addon_path..'img/bg.png', fit=true},
 		draggable = false })
 	b.capRight = images.new({
+		texture = {path=windower.addon_path..'img/cap_right.png', fit=true},
 		pos = {x=0, y=0},
 		visible = true,
-		color = {alpha=b.color.alpha, red=b.color.red, green=b.color.green, blue=b.color.blue},
-		size = {width=1, height=12},
-		texture = {path=windower.addon_path..'img/cap.png', fit=true},
+		size = {width=6, height=12},
 		draggable = false })
 	b.fill = images.new({
+		texture = {path=windower.addon_path..'img/fill.png', fit=true},
 		pos = {x=0, y=0},
 		visible = true,
 		color = {alpha=b.color.alpha, red=b.color.red, green=b.color.green, blue=b.color.blue},
 		size = {width=b.width, height=12},
-		texture = {path=windower.addon_path..'img/fill.png', fit=true},
 		draggable = false })
 	b.ratTxt = texts.new('${rat|(Rat)}', {
 		pos = {x=0, y=0},
 		text = {size=b.fontSize+2, font=b.font, stroke={width=1, alpha=255, red=50, green=50, blue=50}},
-		flags = {bold=true, draggable=false, italic=true},
+		flags = {bold=true, italic=true, draggable=false},
 		bg = {visible=false} })
 	b.nameTxt = texts.new('${name|(Name)} ${hpp|(100)}', {
 		pos = {x=0, y=0},
 		text = {size=b.fontSize, font=b.font, stroke={width=1, alpha=255, red=50, green=50, blue=50}},
-		flags = {bold=true, draggable=false, italic=true},
+		flags = {bold=true, italic=true, draggable=false},
 		bg = {visible=false} })
 	b.distTxt = texts.new('${distance|(0.0)}\'', {
 		pos = {x=0, y=0},
@@ -98,12 +96,12 @@ function bar.setPos(b, x, y)
 	b.x = x
 	b.y = y
 	b.capLeft:pos(x, y)
-	b.bg:pos(x+1, y)
-	b.fill:pos(x+1, y)
-	b.capRight:pos(x+1+b.width, y)
-	b.nameTxt:pos(x+2, y-math.floor(b.fontSize/2))
-	b.distTxt:pos(x+b.width+6, y)
-	b.ratTxt:pos(x+2, y- math.floor(b.fontSize*2))
+	b.bg:pos(x+6, y)
+	b.fill:pos(x+6, y)
+	b.capRight:pos(x+6+b.width, y)
+	b.nameTxt:pos(x+8, y-math.floor(b.fontSize/2))
+	b.distTxt:pos(x+b.width+13, y)
+	b.ratTxt:pos(x+8, y- math.floor(b.fontSize*2))
 end
 
 function bar.setRat(b, ratName)

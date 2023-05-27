@@ -2,7 +2,7 @@
 
 Addon for Windower 4 for FFXI. Tracks party and enemy actions to create a pseudo enmity list and uses customizeable parameters to pick the next target to attack when your current target dies. Also has features for an on-screen enmity list, and raid assist target.
 
-<img src="https://i.imgur.com/Zi0nM4k.png">
+<img src="https://i.imgur.com/clNPngP.png">
 
 ### Commands
 
@@ -33,7 +33,7 @@ Addon for Windower 4 for FFXI. Tracks party and enemy actions to create a pseudo
 
 ### Setup mode
 
-<img src="https://i.imgur.com/DONpoi0.png">
+<img src="https://i.imgur.com/cXCSqDB.png">
 
 ### Disclaimer
 

@@ -26,7 +26,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.--]]
 
 _addon.name = 'AutoTargetAssist'
 _addon.author = 'Toast'
-_addon.version = '1.0.0'
+_addon.version = '1.0.1'
 _addon.commands = {'ata', 'autotargetassist'}
 
 require('luau')
@@ -83,7 +83,7 @@ local ratTarget = nil
 local actionCategories = S{1, 2, 3, 4, 6, 11, 13, 15}
 local affirmatives = S{"on", "true", "t", "yes", "y"}
 local negatives = S{"off", "false", "f", "no", "n"}
-local untargetableEntities = S{"zisurru"}
+local untargetableEntities = S{"zisurru", "malicious spire", "poison mist"}
 local state = {}
 state.setup = false
 state.cs = false
